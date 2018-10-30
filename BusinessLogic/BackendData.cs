@@ -8,7 +8,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using Unidecode.NET;
-
+using System.Data.SQLite;
 namespace BusinessLogic
 {
     public static class BackendData
@@ -27,7 +27,19 @@ namespace BusinessLogic
 
         private static readonly string jsonTextFile = @"C:\Home\dropbox\fantasyfootball\JSON.txt";
         public static readonly string photoFolder = @"C:\Home\dropbox\fantasyfootball\Photos\";
+        public static readonly string databaseFolder = @"C:\Home\dropbox\fantasyfootball\";
 
+
+        #region sqlite database stuff
+
+        public static void Create_Dataabse()
+        {
+            SQLiteConnection.CreateFile(databaseFolder + "FantasyData.sqlite");
+        }
+        
+        
+        
+        #endregion
 
 
         public static void filter_Players(string filter)
@@ -114,7 +126,6 @@ namespace BusinessLogic
             numberOfCurrentPlayer = databaseLocation + 1;
             currentPlayer = filteredPlayers[databaseLocation];
         }
-
         public static List<string> getPlayerNames()
         {
             var playersNamesList = new List<string>();
@@ -125,8 +136,6 @@ namespace BusinessLogic
             }
             return playersNamesList;
         }
-
-
         public static void get_player_search(string player)
         {
             int searchCount = 0;
@@ -152,7 +161,6 @@ namespace BusinessLogic
             }
             return temp;
         }
-
         public static void set_numberOfPlayers()
         {
             //numberOfPlayers = fantasyPlayer.Element.Length;
@@ -206,7 +214,6 @@ namespace BusinessLogic
         {
             return ((Convert.ToDecimal(currentPlayer.TotalPoints)) / Convert.ToInt32(fantasyPlayer.Game_Week) * maxGames);
         }
-
         public static Decimal Get_Games_Played()
         {
             if (currentPlayer.TotalPoints > 0)
