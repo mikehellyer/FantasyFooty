@@ -28,6 +28,7 @@
                     <Label x:Name="lblGamesPlayed" Content="Games Played" HorizontalAlignment="Left" Margin="564,56,0,0" VerticalAlignment="Top" FontSize="20"/>
                     <Label x:Name="lblPPW" Content="PPW" HorizontalAlignment="Left" Margin="569,161,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.329,0.373"/>
                     <GroupBox Header="Player Stats" HorizontalAlignment="Left" Height="298" Margin="562,5,0,0" VerticalAlignment="Top" Width="245"/>
+                    <Button x:Name="btnPhotoUpdate" Content="Updates Photos" HorizontalAlignment="Left" Margin="1139,377,0,0" VerticalAlignment="Top" Width="139" Height="45" Click="btnPhotoUpdate_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Player History" FontSize="18">

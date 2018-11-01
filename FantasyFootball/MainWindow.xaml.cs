@@ -181,5 +181,10 @@ namespace FantasyFootball
         {
 
         }
+
+        private void btnPhotoUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            BackendData.Download_Photos();
+        }
     }
 }
