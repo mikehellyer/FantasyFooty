@@ -186,5 +186,17 @@ namespace FantasyFootball
         {
             BackendData.Download_Photos();
         }
+
+        private void mnuDatabaseTools_Click(object sender, RoutedEventArgs e)
+        {
+            DatabaseTools DatabaseWindow = new DatabaseTools();
+            DatabaseWindow.Show();
+            
+        }
+
+        private void mnuUpdatePhotos_Click(object sender, RoutedEventArgs e)
+        {
+            BackendData.Download_Photos();
+        }
     }
 }

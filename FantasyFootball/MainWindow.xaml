@@ -28,7 +28,6 @@
                     <Label x:Name="lblGamesPlayed" Content="Games Played" HorizontalAlignment="Left" Margin="564,56,0,0" VerticalAlignment="Top" FontSize="20"/>
                     <Label x:Name="lblPPW" Content="PPW" HorizontalAlignment="Left" Margin="569,161,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.329,0.373"/>
                     <GroupBox Header="Player Stats" HorizontalAlignment="Left" Height="298" Margin="562,5,0,0" VerticalAlignment="Top" Width="245"/>
-                    <Button x:Name="btnPhotoUpdate" Content="Updates Photos" HorizontalAlignment="Left" Margin="1139,377,0,0" VerticalAlignment="Top" Width="139" Height="45" Click="btnPhotoUpdate_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Player History" FontSize="18">
@@ -51,5 +50,13 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
+        <Menu HorizontalAlignment="Right" Height="25" Margin="0,642,1073,0" VerticalAlignment="Top" Width="272">
+            <MenuItem x:Name="mnuFile" Header="File" Height="25" Width="30">
+                <MenuItem x:Name="mnuUpdatePhotos" Header="Update Photos" HorizontalAlignment="Left" Height="25" Width="168" Margin="0,0,-28,0" Click="mnuUpdatePhotos_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="mnuEdit" Header="Edit" Height="25" Width="34">
+                <MenuItem x:Name="mnuDatabaseTools" Header="Database Tools" HorizontalAlignment="Left" Height="25" Width="234" Margin="0,0,-94,0" Click="mnuDatabaseTools_Click"/>
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>

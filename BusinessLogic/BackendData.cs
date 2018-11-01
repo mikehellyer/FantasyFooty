@@ -32,9 +32,13 @@ namespace BusinessLogic
 
         #region sqlite database stuff
 
-        public static void Create_Dataabse()
+        public static void Create_Database()
         {
-            SQLiteConnection.CreateFile(databaseFolder + "FantasyData.sqlite");
+            if (File.Exists(databaseFolder + "FantasyData.sqlite")) { }
+            else
+            {
+                SQLiteConnection.CreateFile(databaseFolder + "FantasyData.sqlite");
+            }
         }
         
         
