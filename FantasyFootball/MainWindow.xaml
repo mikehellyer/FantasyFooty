@@ -6,50 +6,51 @@
         xmlns:local="clr-namespace:FantasyFootball"
         mc:Ignorable="d"
         Title="Fantasy Football Analyser" Height="750" Width="1400" GotMouseCapture="frmMainScreen_GotMouseCapture">
+    <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Hidden">
     <Grid HorizontalAlignment="Left" Height="705" Margin="10,10,0,0" VerticalAlignment="Top" Width="1380">
         <Label x:Name="lblPlayerCount" Content="Player Count" HorizontalAlignment="Left" Margin="413,106,0,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.467,-0.187"/>
-        <Label x:Name="lblCurrentWeek" Content="Current Week" HorizontalAlignment="Left" Margin="588,106,0,0" VerticalAlignment="Top" RenderTransformOrigin="7.619,-10.31" FontSize="18"/>
-        <TabControl HorizontalAlignment="Left" Height="487" Margin="35,108,0,0" VerticalAlignment="Top" Width="1314" SelectionChanged="TabControl_SelectionChanged">
-            <TabItem Header="Player Details" FontSize="18">
-                <Grid Background="#FFE5E5E5">
-                    <GroupBox Header="Player Details" HorizontalAlignment="Left" Height="298" Margin="287,5,0,0" VerticalAlignment="Top" Width="244"/>
-                    <Image x:Name="imgPlayer" HorizontalAlignment="Left" Height="319" Margin="20,19,0,0" VerticalAlignment="Top" Width="263"/>
-                    <Label x:Name="lblFirstName" Content="First Name" HorizontalAlignment="Left" Margin="291,39,0,0" VerticalAlignment="Top" FontSize="20"/>
-                    <Label x:Name="lblSecondName" Content="Second Name" HorizontalAlignment="Left" Margin="291,73,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.851,0.236" FontSize="20"/>
-                    <Label x:Name="lblPhotoFile" Content="Photo File" HorizontalAlignment="Left" Margin="8,410,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="lblTeam" Content="Team" HorizontalAlignment="Left" Margin="291,174,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.851,0.236" FontSize="20"/>
-                    <Label x:Name="lblTotalPoints" Content="Total Points" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Margin="562,19,0,0"/>
-                    <Label x:Name="lblAverageMinutes" Content="Average Minutes" HorizontalAlignment="Left" Margin="566,80,0,0" VerticalAlignment="Top" FontSize="20"/>
-                    <Label x:Name="lblPosition" Content="Position" HorizontalAlignment="Left" Margin="291,137,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.851,0.236" FontSize="20"/>
-                    <Label x:Name="lblPPG" Content="PPG" HorizontalAlignment="Left" Margin="567,107,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.329,0.373"/>
-                    <Label x:Name="lblValue" Content="Value" HorizontalAlignment="Left" Margin="291,216,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.851,0.236" FontSize="20"/>
-                    <Label x:Name="lblChanceOfPlaying" Content="Chance Of Playing" HorizontalAlignment="Left" Margin="10,360,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.851,0.236" FontSize="20"/>
-                    <Label x:Name="lblPPPM" Content="PPPM/PTP" HorizontalAlignment="Left" Margin="565,189,0,0" VerticalAlignment="Top" FontSize="20"/>
-                    <Label x:Name="lblGamesPlayed" Content="Games Played" HorizontalAlignment="Left" Margin="564,56,0,0" VerticalAlignment="Top" FontSize="20"/>
-                    <Label x:Name="lblPPW" Content="PPW" HorizontalAlignment="Left" Margin="569,161,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.329,0.373"/>
-                    <GroupBox Header="Player Stats" HorizontalAlignment="Left" Height="298" Margin="562,5,0,0" VerticalAlignment="Top" Width="245"/>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Player History" FontSize="18">
-                <Grid Background="#FFE5E5E5"/>
-            </TabItem>
-        </TabControl>
-        <Button x:Name="btnPrevious" Content="Previous" HorizontalAlignment="Left" Margin="1001,608,0,0" VerticalAlignment="Top" Width="134" Height="59" Click="btnPrevious_Click"/>
-        <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="1177,608,0,0" VerticalAlignment="Top" Width="135" Height="59" Click="btnNext_Click"/>
-        <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="1225,56,0,0" VerticalAlignment="Top" Width="124" Height="36" Click="btnSearch_Click"/>
-        <TextBox x:Name="txtSearch" HorizontalAlignment="Left" Height="36" Margin="1077,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" FontSize="25" KeyDown="txtSearch_KeyDown"/>
-        <ComboBox x:Name="cmbSelectFilter" HorizontalAlignment="Left" Margin="858,56,0,0" VerticalAlignment="Top" Width="194" Height="36" SelectionChanged="cmbSelectFilter_SelectionChanged" FontSize="24"/>
-        <Label x:Name="lblFilterState" Content="Filtered on :" HorizontalAlignment="Left" Margin="739,56,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.851,0.236" FontSize="20"/>
-        <Label x:Name="lblTitle" Content="Fantasy Football Analyzer" HorizontalAlignment="Left" Margin="-12,-1,0,0" VerticalAlignment="Top" FontSize="53" RenderTransformOrigin="0.5,0.5" FontFamily="MV Boli" FontStyle="Oblique" FontWeight="ExtraBold" Foreground="#FF7D5FE2">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-4.961"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
+            <Label x:Name="lblCurrentWeek" Content="Current Week" HorizontalAlignment="Left" Margin="588,106,0,0" VerticalAlignment="Top" RenderTransformOrigin="7.619,-10.31" FontSize="18"/>
+            <TabControl HorizontalAlignment="Left" Height="487" Margin="35,108,0,0" VerticalAlignment="Top" Width="1314" SelectionChanged="TabControl_SelectionChanged">
+                <TabItem Header="Player Details" FontSize="18">
+                    <Grid Background="#FFE5E5E5">
+                        <GroupBox Header="Player Details" HorizontalAlignment="Left" Height="298" Margin="287,5,0,0" VerticalAlignment="Top" Width="244"/>
+                        <Image x:Name="imgPlayer" HorizontalAlignment="Left" Height="319" Margin="20,19,0,0" VerticalAlignment="Top" Width="263"/>
+                        <Label x:Name="lblFirstName" Content="First Name" HorizontalAlignment="Left" Margin="291,39,0,0" VerticalAlignment="Top" FontSize="20"/>
+                        <Label x:Name="lblSecondName" Content="Second Name" HorizontalAlignment="Left" Margin="291,73,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.851,0.236" FontSize="20"/>
+                        <Label x:Name="lblPhotoFile" Content="Photo File" HorizontalAlignment="Left" Margin="8,410,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="lblTeam" Content="Team" HorizontalAlignment="Left" Margin="291,174,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.851,0.236" FontSize="20"/>
+                        <Label x:Name="lblTotalPoints" Content="Total Points" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Margin="562,19,0,0"/>
+                        <Label x:Name="lblAverageMinutes" Content="Average Minutes" HorizontalAlignment="Left" Margin="566,80,0,0" VerticalAlignment="Top" FontSize="20"/>
+                        <Label x:Name="lblPosition" Content="Position" HorizontalAlignment="Left" Margin="291,137,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.851,0.236" FontSize="20"/>
+                        <Label x:Name="lblPPG" Content="PPG" HorizontalAlignment="Left" Margin="567,107,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.329,0.373"/>
+                        <Label x:Name="lblValue" Content="Value" HorizontalAlignment="Left" Margin="291,216,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.851,0.236" FontSize="20"/>
+                        <Label x:Name="lblChanceOfPlaying" Content="Chance Of Playing" HorizontalAlignment="Left" Margin="10,360,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.851,0.236" FontSize="20"/>
+                        <Label x:Name="lblPPPM" Content="PPPM/PTP" HorizontalAlignment="Left" Margin="565,189,0,0" VerticalAlignment="Top" FontSize="20"/>
+                        <Label x:Name="lblGamesPlayed" Content="Games Played" HorizontalAlignment="Left" Margin="564,56,0,0" VerticalAlignment="Top" FontSize="20"/>
+                        <Label x:Name="lblPPW" Content="PPW" HorizontalAlignment="Left" Margin="569,161,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.329,0.373"/>
+                        <GroupBox Header="Player Stats" HorizontalAlignment="Left" Height="298" Margin="562,5,0,0" VerticalAlignment="Top" Width="245"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Player History" FontSize="18">
+                    <Grid Background="#FFE5E5E5"/>
+                </TabItem>
+            </TabControl>
+            <Button x:Name="btnPrevious" Content="Previous" HorizontalAlignment="Left" Margin="1001,608,0,0" VerticalAlignment="Top" Width="134" Height="59" Click="btnPrevious_Click"/>
+            <Button x:Name="btnNext" Content="Next" HorizontalAlignment="Left" Margin="1177,608,0,0" VerticalAlignment="Top" Width="135" Height="59" Click="btnNext_Click"/>
+            <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="1225,56,0,0" VerticalAlignment="Top" Width="124" Height="36" Click="btnSearch_Click"/>
+            <TextBox x:Name="txtSearch" HorizontalAlignment="Left" Height="36" Margin="1077,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" FontSize="25" KeyDown="txtSearch_KeyDown"/>
+            <ComboBox x:Name="cmbSelectFilter" HorizontalAlignment="Left" Margin="858,56,0,0" VerticalAlignment="Top" Width="194" Height="36" SelectionChanged="cmbSelectFilter_SelectionChanged" FontSize="24"/>
+            <Label x:Name="lblFilterState" Content="Filtered on :" HorizontalAlignment="Left" Margin="739,56,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.851,0.236" FontSize="20"/>
+            <Label x:Name="lblTitle" Content="Fantasy Football Analyzer" HorizontalAlignment="Left" Margin="-12,-1,0,0" VerticalAlignment="Top" FontSize="53" RenderTransformOrigin="0.5,0.5" FontFamily="MV Boli" FontStyle="Oblique" FontWeight="ExtraBold" Foreground="#FF7D5FE2">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-4.961"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
         <Menu HorizontalAlignment="Right" Height="25" Margin="0,642,1073,0" VerticalAlignment="Top" Width="272">
             <MenuItem x:Name="mnuFile" Header="File" Height="25" Width="30">
                 <MenuItem x:Name="mnuUpdatePhotos" Header="Update Photos" HorizontalAlignment="Left" Height="25" Width="168" Margin="0,0,-28,0" Click="mnuUpdatePhotos_Click"/>
@@ -59,4 +60,6 @@
             </MenuItem>
         </Menu>
     </Grid>
+    </ScrollViewer>
+
 </Window>
