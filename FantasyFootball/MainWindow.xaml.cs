@@ -56,7 +56,7 @@ namespace FantasyFootball
         {
             Element currentPlayer = BackendData.get_Current_Player();
            
-            //string playerImage = @"C:\Home\dropbox\fantasyfootball\Photos\" + BackendData.get_Current_Player_Code() + ".png";
+            // string playerImage = @"C:\Home\dropbox\fantasyfootball\Photos\" + BackendData.get_Current_Player_Code() + ".png";
             try
             {
                 
