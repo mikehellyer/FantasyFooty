@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyFootball", "FantasyF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleFooty", "ConsoleFooty\ConsoleFooty.csproj", "{3D7E0B24-DF2D-4CB2-9D4A-5C570DA4DE38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseTools", "DatabaseTools\DatabaseTools.csproj", "{2C4B8B9F-B573-43E0-9EEF-FD84061EFE9E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3D7E0B24-DF2D-4CB2-9D4A-5C570DA4DE38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D7E0B24-DF2D-4CB2-9D4A-5C570DA4DE38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D7E0B24-DF2D-4CB2-9D4A-5C570DA4DE38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C4B8B9F-B573-43E0-9EEF-FD84061EFE9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C4B8B9F-B573-43E0-9EEF-FD84061EFE9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C4B8B9F-B573-43E0-9EEF-FD84061EFE9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C4B8B9F-B573-43E0-9EEF-FD84061EFE9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

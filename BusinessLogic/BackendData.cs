@@ -34,14 +34,33 @@ namespace BusinessLogic
 
         public static void Create_Database()
         {
-            if (File.Exists(databaseFolder + "FantasyData.sqlite")) { }
+            if (File.Exists(databaseFolder + "FantasyData.sqlite"))
+            {
+                Create_Tables();
+            }
             else
             {
                 SQLiteConnection.CreateFile(databaseFolder + "FantasyData.sqlite");
+                Create_Tables();
             }
         }
         
-        
+        private static void Create_Tables()
+        {
+
+        }
+
+        public static void Destroy_Database()
+        {
+            if (File.Exists(databaseFolder + "Fantasy.sqlite"))
+            {
+            }
+            else
+            {
+                
+            }
+        }
+
         
         #endregion
 
