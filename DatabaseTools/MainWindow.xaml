@@ -12,7 +12,7 @@
             <ColumnDefinition Width="481*"/>
         </Grid.ColumnDefinitions>
         <Button x:Name="btnCreate" Content="Create Database" HorizontalAlignment="Left" Margin="54,54,0,0" VerticalAlignment="Top" Width="106" Click="btnCreate_Click"/>
-        <Button x:Name="btnDestroy" Content="Destroy Database" HorizontalAlignment="Left" Margin="54,101,0,0" VerticalAlignment="Top" Width="106"/>
+        <Button x:Name="btnDestroy" Content="Destroy Database" HorizontalAlignment="Left" Margin="54,101,0,0" VerticalAlignment="Top" Width="106" Click="btnDestroy_Click"/>
 
     </Grid>
 </Window>

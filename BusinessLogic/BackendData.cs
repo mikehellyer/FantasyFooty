@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Unidecode.NET;
 using System.Data.SQLite;
+
 namespace BusinessLogic
 {
     public static class BackendData
     {
-        //public List<Player> PlayerList = new List<Player>();
         public static FantasyPlayer fantasyPlayer = new FantasyPlayer();
         public static TeamPosition teamPosition = new TeamPosition();
         public static Team teamDetail = new Team();
@@ -27,38 +27,78 @@ namespace BusinessLogic
 
         private static readonly string jsonTextFile = @"C:\Home\dropbox\fantasyfootball\JSON.txt";
         public static readonly string photoFolder = @"C:\Home\dropbox\fantasyfootball\Photos\";
-        public static readonly string databaseFolder = @"C:\Home\dropbox\fantasyfootball\";
+        public static readonly string databaseFile = @"C:\Home\dropbox\fantasyfootball\FantasyData.sqlite";
+        public static SQLiteConnection conn;
 
 
         #region sqlite database stuff
 
         public static void Create_Database()
         {
-            if (File.Exists(databaseFolder + "FantasyData.sqlite"))
+            if (File.Exists(databaseFile))
             {
                 Create_Tables();
             }
             else
             {
-                SQLiteConnection.CreateFile(databaseFolder + "FantasyData.sqlite");
+                SQLiteConnection.CreateFile(databaseFile);
                 Create_Tables();
             }
         }
         
         private static void Create_Tables()
         {
-
+            conn = new SQLiteConnection("Data Source="+databaseFile);
+            conn.Open();
+            string sql = "create table PlayerElement " +
+                "(Id Long PRIMARY KEY, Photo string , WebName string, TeamCode long , Status string , Code long, " +
+                "FirstName string , SecondName string , SquadNumber string, News string, NowCost Long , NewsAdded DateTimeOffset, " +
+                "ChanceOfPlayingThisRound long, ChanceOfPlayingNextRound long, ValueForm string , ValueSeason string , CostChangeStart long , " +
+                "CostChangeEvent long  , CostChangeStartFall long , CostChangeEventFall long , InDreamteam bool ,  DreamteamCount long , " +
+                "SelectedByPercent string , Form string , TransfersOut long , TransfersIn long , TransfersOutEvent long , TransfersInEvent long ," +
+                "LoansIn long , LoansOut long , LoanedIn long , LoanedOut long  , TotalPoints long , EventPoints long , PointsPerGame string , " +
+                "EpThis string , EpNext string , Special bool , Minutes long , GoalsScored long , Assists long , CleanSheets long  ," +
+                " GoalsConceded long ,OwnGoals long , PenaltiesSaved long , PenaltiesMissed long , YellowCards long , RedCards long  ," +
+                "Saves long , Bonus long ,Bps long , Influence string  , Creativity string  , Threat string , IctIndex string , EaIndex long " +
+                "ElementType long  , Team long)";
+        
+            SQLiteCommand command = new SQLiteCommand(sql, conn);
+            command.ExecuteNonQuery();
+            
         }
 
         public static void Destroy_Database()
         {
-            if (File.Exists(databaseFolder + "Fantasy.sqlite"))
+            if (File.Exists(databaseFile))
             {
+                File.Delete(databaseFile);
             }
+
             else
             {
                 
             }
+        }
+
+        public static void Update_Database()
+        {
+            // Iterate over the latest list of Players and check if player exists then either adds or updates the database
+            conn = new SQLiteConnection("Data Source=" + databaseFile);
+            conn.Open();
+            SQLiteCommand command = new SQLiteCommand(conn);
+
+            foreach (Element player in fantasyPlayer.Element)
+            {
+                //if player exists then update record else insert new record
+                command.CommandText =  "SELECT Id from PlayerElement WHERE Id =" + player.Id;
+                if (command.ExecuteNonQuery() == 0)
+                {
+                    
+                }
+
+
+            }
+
         }
 
         
@@ -76,7 +116,7 @@ namespace BusinessLogic
             
             
                 foreach (Element player in fantasyPlayer.Element)
-            {
+                {
                 switch (filter)
                 {
                     case "All":

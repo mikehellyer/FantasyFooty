@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BusinessLogic;
 
+
 namespace DatabaseTools
 {
     /// <summary>
@@ -29,6 +30,11 @@ namespace DatabaseTools
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
             BackendData.Create_Database();
+        }
+
+        private void btnDestroy_Click(object sender, RoutedEventArgs e)
+        {
+            BackendData.Destroy_Database();
         }
     }
 }
